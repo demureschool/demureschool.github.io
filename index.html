@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEMURE. — Kukis Rumahan Dipanggang Segar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="logo">DEMURE SCHOOL<span class="dot">.</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#menu">Menu</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#ulasan">Ulasan</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Buka keranjang">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 4H5L5.8 7M5.8 7L7.2 15.6C7.34 16.4 8.03 17 8.85 17H17.4C18.2 17 18.87 16.42 19 15.63L20.2 8.63C20.36 7.7 19.64 6.85 18.7 6.85H5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9.5" cy="20.5" r="1.4" fill="currentColor"/>
+          <circle cx="17" cy="20.5" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-kicker">Toko kukis rumahan sejak 2019</p>
+      <h1>Kukis yang habis<br>sebelum sempat<br>difoto.</h1>
+      <p class="hero-desc">Dipanggang setiap pagi pakai mentega asli, cokelat berkualitas, dan resep yang diwariskan dari dapur rumah. Pesan langsung, kami antar via WhatsApp.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">Lihat menu</a>
+        <a href="#lokasi" class="btn btn-ghost">Cara pesan</a>
+      </div>
+    </div>
+ 
+    <div class="hero-visual" aria-hidden="true">
+      <div class="cookie-stack">
+        <img class="hero-logo" src="img/logo.png" alt="" width="350" height="350">
+      </div>
+      <div class="stamp">Dipanggang<br>setiap hari</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="section-inner">
+    <h2>Menu hari ini</h2>
+    <p class="section-lead">Semua kukis dibuat dalam batch kecil, jadi rasanya konsisten dan selalu segar. Stok menyesuaikan bahan yang datang tiap pagi.Satu gigitan, sejuta kehangatan. Setiap keping cookies kami dipanggang sempurna dengan bahan-bahan pilihan, menghadirkan tekstur renyah di luar dan kelembutan yang meleleh di dalam. Pas banget buat nemenin momen santai, teman ngopi, atau sekadar pemanja diri di tengah hari.</p>
+
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<section class="about-section" id="tentang">
+  <div class="section-inner about-grid">
+    <div class="about-copy">
+      <h2>Dari Hangatnya Dapur Rumah, Sampai ke Genggamanmu</h2>
+      <p>Berawal dari aroma mentega yang membumbung di sebuah dapur kecil di sudut kota Bandung, tahun 2019. Kala itu, DEMURE. lahir sederhana—hanya kepingan hangat penawar lelah untuk kawan sekerja. Tanpa disangka, kehangatan itu kini menjangkau ratusan jemari setiap minggunya.
+
+Waktu boleh berlalu, namun ikrar kami tak pernah bergeser. Setiap keping digulung dari nol dengan kepedulian tulus, tanpa pintasan instan. Setiap loyang yang keluar dari oven adalah janji kelezatan—dicicipi dan diresapi terlebih dahulu. Bila racikannya belum sempurna di lidah kami, ia tak akan pernah sampai ke jemarimu.</p>
+      <p>Kami masih pegang prinsip yang sama: adonan dibuat dari nol, tanpa campuran instan, dan tiap loyang dicicipi dulu sebelum dikemas. Kalau tim dapur nggak puas, kukisnya nggak dijual.</p>
+    </div>
+    <ol class="process-list">
+      <li><span class="process-num">1</span><div><strong>Campur adonan</strong><p>Mentega, gula, dan cokelat dicampur segar tiap pagi jam 5.</p></div></li>
+      <li><span class="process-num">2</span><div><strong>Panggang</strong><p>Dipanggang per batch kecil supaya matangnya merata.</p></div></li>
+      <li><span class="process-num">3</span><div><strong>Dinginkan</strong><p>Didiamkan dulu biar teksturnya pas: renyah luar, lembut dalam.</p></div></li>
+      <li><span class="process-num">4</span><div><strong>Kemas & antar</strong><p>Masuk kotak kedap udara, siap dipesan hari itu juga.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="reviews-section" id="ulasan">
+  <div class="section-inner reviews-section-inner">
+    <h2>Kata mereka yang sudah gigit duluan</h2>
+    <div class="reviews-track-wrap">
+      <div class="reviews-track" id="reviewsGrid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="location-section" id="lokasi">
+  <div class="section-inner location-grid">
+    <div class="location-card">
+      <h2>Ambil sendiri atau kami antar</h2>
+      <dl class="location-details">
+        <div>
+          <dt>Alamat</dt>
+          <dd>Jl. Melati Raya No. 12, Kemang, Jakarta Selatan</dd>
+        </div>
+        <div>
+          <dt>Jam buka</dt>
+          <dd>Senin–Jumat, 09.00–20.00<br>Sabtu–Minggu, 10.00–21.00</dd>
+        </div>
+        <div>
+          <dt>Kontak</dt>
+          <dd>0831-3468-1596 (WhatsApp)</dd>
+        </div>
+      </dl>
+      <a class="btn btn-primary" id="waLocationBtn" href="#" target="_blank" rel="noopener">Tanya via WhatsApp</a>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5319096180488!2d106.76465207534724!3d-6.580599264329402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4f906e40827%3A0x6b93a4462670547c!2sSMK%20Infokom%20Kota%20Bogor!5e0!3m2!1sid!2sid!4v1789194295719!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <p class="logo footer-logo">DEMURE<span class="dot">.</span></p>
+      <p class="footer-tag">Kukis rumahan, digigit sampai habis.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/demureschool" target="_blank" rel="noopener" aria-label="Instagram DEMURE. Cookies">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="TikTok DEMURE. Cookies">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.5 3v10.8a3.3 3.3 0 1 1-2.6-3.23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M14.5 3c.4 2.3 2 4 4.5 4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook DEMURE. Cookies">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 21v-7h2.4l.4-3H14V9c0-.87.24-1.46 1.5-1.46H17V4.9c-.26-.03-1.15-.11-2.19-.11-2.17 0-3.66 1.32-3.66 3.75V11H8.7v3H11.15v7H14Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#" id="waFooterBtn" target="_blank" rel="noopener" aria-label="WhatsApp DEMURE. Cookies">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.5 17.5 5 21l3.6-1.4A8 8 0 1 0 5.5 15Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M9 9.5c0 3.5 2.9 6.2 6.2 6.2.5 0 .8-.4.7-.9l-.3-1.3a.6.6 0 0 0-.5-.5l-1.4-.2a.6.6 0 0 0-.6.2l-.4.5c-1-.5-1.8-1.3-2.3-2.3l.5-.4a.6.6 0 0 0 .2-.6L11 8.8a.6.6 0 0 0-.5-.5H9.3a.6.6 0 0 0-.3.6Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#menu">Menu</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#ulasan">Ulasan</a>
+    </div>
+  </div>
+  <p class="footer-copy">Ahmad Reyhan © 2026 DEMURE. Cookies. Semua kukis dibuat dengan tangan, bukan generator resep.</p>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja">
+  <div class="cart-header">
+    <h3>Keranjangmu</h3>
+    <button id="cartClose" aria-label="Tutup keranjang">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmptyMsg">Keranjang masih kosong. Yuk pilih kukis favoritmu.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">Rp 0</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>Checkout via WhatsApp</button>
+    <button class="btn btn-ghost btn-block" id="webCheckoutBtn" disabled>Checkout via Web</button>
+    <p class="cart-note">Pesanan dikirim sebagai pesan WhatsApp ke toko. Pembayaran &amp; ongkir dikonfirmasi langsung oleh admin.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-overlay" id="webCheckoutOverlay"></div>
+<div class="checkout-modal" id="webCheckoutModal" role="dialog" aria-modal="true" aria-label="Checkout via web" hidden>
+  <button class="modal-close" id="webCheckoutClose" aria-label="Tutup checkout">&times;</button>
+
+  <div class="checkout-view" id="checkoutFormView">
+    <h3>Checkout</h3>
+    <p class="modal-sub">Isi data pengiriman lalu pilih metode pembayaran.</p>
+
+    <div class="checkout-summary" id="checkoutSummary"></div>
+
+    <form id="checkoutForm" novalidate>
+      <label class="field">
+        <span>Nama penerima</span>
+        <input type="text" name="name" required placeholder="Nama lengkap">
+      </label>
+      <label class="field">
+        <span>Nomor HP</span>
+        <input type="tel" name="phone" required placeholder="08xxxxxxxxxx">
+      </label>
+      <label class="field">
+        <span>Alamat pengiriman</span>
+        <textarea name="address" rows="2" required placeholder="Jalan, nomor rumah, kecamatan, kota"></textarea>
+      </label>
+
+      <fieldset class="payment-methods">
+        <legend>Metode pembayaran</legend>
+        <div class="payment-grid" id="paymentGrid"></div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary btn-block">Buat pesanan</button>
+    </form>
+  </div>
+
+  <div class="checkout-view" id="checkoutPaymentView" hidden>
+    <h3 id="paymentMethodTitle">Pembayaran</h3>
+    <p class="modal-sub">Pesanan <strong id="paymentOrderNumber"></strong>. Selesaikan sebelum waktu habis.</p>
+
+    <div class="payment-timer" id="paymentTimer">15:00</div>
+
+    <div class="payment-panel" id="paymentPanel"></div>
+
+    <p class="checkout-note payment-expired-note" id="paymentExpiredNote" hidden>Waktu pembayaran sudah habis. Pesananmu masih di keranjang, silakan coba checkout lagi.</p>
+
+    <button class="btn btn-ghost btn-block" id="paymentBackBtn" type="button">Batal &amp; kembali</button>
+  </div>
+
+  <div class="checkout-view" id="checkoutSuccessView" hidden>
+    <div class="success-icon">✓</div>
+    <h3>Pesanan berhasil dibuat</h3>
+    <p class="modal-sub">Nomor pesanan <strong id="orderNumber"></strong>, total <strong id="orderTotal"></strong>.</p>
+    <div class="payment-instructions" id="paymentInstructions"></div>
+    <p class="checkout-note">Terimakasih sudah memesan, mohon ditunggu pesanan-nya</p>
+    <button class="btn btn-primary btn-block" id="checkoutDoneBtn">Selesai</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
