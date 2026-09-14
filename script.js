@@ -347,7 +347,7 @@ function generateAccountNumber(prefix){
 // teks referensi pesanan — bukan QRIS asli dari bank/penyedia pembayaran.
 function buildQrisImageUrl(orderNumber, total){
   const payload = encodeURIComponent(`DEMURE-COOKIES|${orderNumber}|${total}`);
-  return `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=${payload}`;
+  return `img.qr.jpeg=${payload}`;
 }
 
 function openWebCheckout(){
