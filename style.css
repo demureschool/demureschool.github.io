@@ -352,6 +352,39 @@ button{ font-family: inherit; cursor: pointer; }
 .review-card .name{ font-weight: 700; font-size: .9rem; }
 .review-card .role{ font-size: .8rem; color: #B8A98C; }
 
+.review-form{
+  max-width: 620px;
+  margin: 40px auto 0;
+  padding: 0 32px;
+  display:flex; flex-direction:column; gap: 12px;
+}
+.review-form h3{ color: var(--cream); font-size: 1.1rem; margin-bottom: 2px; }
+.review-form-grid{ display:flex; gap: 12px; align-items:center; flex-wrap: wrap; }
+.review-form-grid input{ flex: 1 1 200px; width: auto; }
+.review-form input,
+.review-form textarea{
+  width: 100%;
+  border: 1.5px solid rgba(251,241,223,0.25);
+  background: rgba(251,241,223,0.06);
+  color: var(--cream);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: .92rem;
+  resize: vertical;
+}
+.review-form input::placeholder,
+.review-form textarea::placeholder{ color: rgba(251,241,223,0.5); }
+.review-form input:focus,
+.review-form textarea:focus{ outline: 2px solid var(--butter); outline-offset: 1px; }
+.review-form-rating{ display:flex; gap: 2px; flex-shrink:0; }
+.review-form-rating button{
+  background:none; border:none; font-size: 1.2rem; padding: 2px;
+  filter: grayscale(1) opacity(.4);
+}
+.review-form-rating button.active{ filter: none; }
+.review-form .btn{ align-self: flex-start; }
+
 /* ---------- Location ---------- */
 .location-grid{
   display:grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: stretch;
@@ -542,7 +575,16 @@ button{ font-family: inherit; cursor: pointer; }
   border: 1.5px dashed var(--line);
   margin-bottom: 14px;
 }
-.qris-img{ width: 180px; height: 180px; border-radius: 10px; background:#fff; padding: 8px; }
+.qris-img{
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 8px;
+}
 .qris-amount{ font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; margin: 10px 0 4px; }
 .qris-hint{ font-size: .8rem; color: var(--cocoa-soft); margin: 0; }
 
