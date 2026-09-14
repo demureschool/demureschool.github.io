@@ -2,6 +2,11 @@
 // Ganti nomor ini dengan nomor WhatsApp toko (format: kode negara tanpa + atau 0 di depan)
 const WHATSAPP_NUMBER = "6283134681596";
 
+// Ganti dengan gambar kode QRIS asli toko kamu. Taruh file gambarnya di folder img/
+// lalu sesuaikan nama filenya di bawah ini. Satu kode QR yang sama dipakai untuk semua pesanan
+// (persis seperti QRIS statis yang biasa ditempel di kasir toko).
+const QRIS_IMAGE = "img/qris.jpg";
+
 // ====== KONFIGURASI UKURAN FOTO ======
 // Atur besar-kecil foto kukis di sini (dalam pixel). Tidak perlu ubah CSS.
 const IMAGE_SIZES = {
@@ -15,8 +20,6 @@ const IMAGE_SIZES = {
 // ====== DATA PRODUK ======
 // avg & count = data rating awal (seed). Rating baru dari pengunjung akan
 // dihitung ulang di memori browser (tidak tersimpan permanen setelah reload).
-// "img" mengambil foto acak bertema kukis dari layanan placeholder LoremFlickr
-// (foto asli berlisensi Creative Commons, parameter "lock" membuat foto tetap sama tiap reload).
 // Untuk toko sungguhan, ganti nilai "img" dengan URL foto produk kamu sendiri.
 const PRODUCTS = [
   {
@@ -81,8 +84,9 @@ const REVIEWS = [
 ];
 
 // Metode pembayaran untuk checkout via web.
-// CATATAN: ini simulasi statis untuk keperluan belajar — nomor VA/e-wallet dan
-// kode QRIS dibuat otomatis di browser, belum terhubung ke payment gateway sungguhan.
+// CATATAN: ini simulasi statis untuk keperluan belajar — nomor VA/e-wallet dibuat
+// otomatis di browser, belum terhubung ke payment gateway sungguhan. QRIS pakai
+// gambar kode QR asli toko (lihat QRIS_IMAGE di atas), bukan hasil generate.
 const PAYMENT_TIME_LIMIT_MINUTES = 15; // batas waktu pembayaran
 
 const PAYMENT_METHODS = [
@@ -343,13 +347,6 @@ function generateAccountNumber(prefix){
   return `${prefix} ${digits.slice(0,4)} ${digits.slice(4)}`;
 }
 
-// QR dibuat lewat layanan publik api.qrserver.com (tanpa API key), isinya cuma
-// teks referensi pesanan — bukan QRIS asli dari bank/penyedia pembayaran.
-function buildQrisImageUrl(orderNumber, total){
-  const payload = encodeURIComponent(`DEMURE-COOKIES|${orderNumber}|${total}`);
-  return `img.qr.jpeg=${payload}`;
-}
-
 function openWebCheckout(){
   if(cart.length === 0) return;
   renderCheckoutSummary();
@@ -408,10 +405,10 @@ function renderPaymentView(method, orderNumber, total){
   const panel = document.getElementById("paymentPanel");
 
   if(method.type === "qris"){
-    const qrUrl = buildQrisImageUrl(orderNumber, total);
+    // QRIS statis: satu gambar kode QR asli toko dipakai untuk semua pesanan
     panel.innerHTML = `
       <div class="qris-box">
-        <img class="qris-img" src="${qrUrl}" alt="Kode QRIS untuk pesanan ${orderNumber}">
+        <img class="qris-img" src="${QRIS_IMAGE}" alt="Kode QRIS pembayaran DEMURE. Cookies">
         <p class="qris-amount">${formatRupiah(total)}</p>
         <p class="qris-hint">Pindai dengan aplikasi e-wallet/mobile banking, lalu klik tombol di bawah setelah pembayaran berhasil.</p>
       </div>
