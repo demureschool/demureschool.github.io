@@ -26,7 +26,7 @@ const PRODUCTS = [
     id: "Coffe",
     name: "Coffe Butter Crunch",
     desc: "Rasa kopi yang kuat, pekat, dan sedikit pahit-manis, cocok untuk penikmat kopi yang menyukai aroma roasted yang khas.",
-    price: 25000,
+    price: 10000,
     img: "img/coffe.jpg",
     avg: 4.8, count: 214
   },
@@ -34,7 +34,7 @@ const PRODUCTS = [
     id: "Matcha",
     name: "Matcha Butter Crunch",
     desc: "Perpaduan rasa teh hijau khas Jepang yang kaya, sedikit pahit, dan wangi (earthy), berpadu manis dan gurihnya adonan kue.",
-    price: 28000,
+    price: 10000,
     img: "img/matcha.jpg",
     avg: 4.7, count: 158
   },
@@ -42,7 +42,7 @@ const PRODUCTS = [
     id: "Moccakies",
     name: "Moccakies Butter Crunch",
     desc: "Kombinasi sempurna antara aroma kopi mocca yang harum dengan manisnya cokelat, menciptakan rasa yang klasik dan seimbang.",
-    price: 30000,
+    price: 10000,
     img: "img/moccakies.jpg",
     avg: 4.6, count: 96
   },
@@ -50,7 +50,7 @@ const PRODUCTS = [
     id: "Peanut",
     name: "Peanut Butter Crunch",
     desc: "Sensasi gurih dan manis yang intens dari selai kacang (peanut butter), memberikan rasa khas yang renyah sekaligus lembut di mulut..",
-    price: 26000,
+    price: 10000,
     img: "img/peanut.jpg",
     avg: 4.5, count: 132
   },
@@ -58,7 +58,7 @@ const PRODUCTS = [
     id: "Red velvet",
     name: "Red Velvet Butter Crunch",
     desc: "Memiliki warna merah yang cantik dengan cita rasa cokelat tipis, gurih khas butter, dan kelezatan yang elegan.",
-    price: 32000,
+    price: 10000,
     img: "img/red-velvet.jpg",
     avg: 4.9, count: 271
   },
@@ -66,7 +66,7 @@ const PRODUCTS = [
     id: "Taro",
     name: "Taro Butter Crunch",
     desc: "Manis nan unik dari talas (taro) yang creamy, menghadirkan aroma wangi yang lembut serta warna ungu yang menarik perhatian.",
-    price: 27000,
+    price: 10000,
     img: "img/taro.jpg",
     avg: 4.6, count: 118
   }
