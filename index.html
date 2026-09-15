@@ -95,6 +95,22 @@ Waktu boleh berlalu, namun ikrar kami tak pernah bergeser. Setiap keping digulun
     <div class="reviews-track-wrap">
       <div class="reviews-track" id="reviewsGrid"></div>
     </div>
+
+    <form class="review-form" id="reviewForm">
+      <h3>Tulis ulasanmu</h3>
+      <div class="review-form-grid">
+        <input type="text" name="name" placeholder="Nama kamu" required maxlength="60">
+        <div class="review-form-rating" id="reviewFormRating">
+          <button type="button" data-value="1" aria-label="1 dari 5">🍪</button>
+          <button type="button" data-value="2" aria-label="2 dari 5">🍪</button>
+          <button type="button" data-value="3" aria-label="3 dari 5">🍪</button>
+          <button type="button" data-value="4" aria-label="4 dari 5">🍪</button>
+          <button type="button" data-value="5" aria-label="5 dari 5">🍪</button>
+        </div>
+      </div>
+      <textarea name="quote" rows="2" placeholder="Ceritakan pengalamanmu soal kukis DEMURE..." required maxlength="240"></textarea>
+      <button type="submit" class="btn btn-primary">Kirim ulasan</button>
+    </form>
   </div>
 </section>
 
@@ -244,6 +260,7 @@ Waktu boleh berlalu, namun ikrar kami tak pernah bergeser. Setiap keping digulun
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
