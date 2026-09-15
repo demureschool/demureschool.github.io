@@ -11,8 +11,8 @@ const QRIS_IMAGE = "img/qris.jpg";
 // 1. Buat project gratis di https://supabase.com
 // 2. Jalankan file supabase-setup.sql (dikirim terpisah) lewat SQL Editor di project itu
 // 3. Ambil Project URL & anon public key dari Settings -> API, lalu tempel di bawah ini
-const SUPABASE_URL = "GANTI_DENGAN_PROJECT_URL_SUPABASE_KAMU";
-const SUPABASE_ANON_KEY = "GANTI_DENGAN_ANON_PUBLIC_KEY_SUPABASE_KAMU";
+const SUPABASE_URL = "https://mdzwrdrljmtbdcbzlgvd.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_gfiigtfTEAuXJDk93cdkfA_STGNBQcz";
 
 const supabaseReady = !SUPABASE_URL.startsWith("GANTI_") && !SUPABASE_ANON_KEY.startsWith("GANTI_");
 const supabase = supabaseReady
