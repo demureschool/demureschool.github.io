@@ -15,12 +15,12 @@ const SUPABASE_URL = "https://mdzwrdrljmtbdcbzlgvd.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_gfiigtfTEAuXJDk93cdkfA_STGNBQcz";
 
 let supabaseReady = !SUPABASE_URL.startsWith("GANTI_") && !SUPABASE_ANON_KEY.startsWith("GANTI_");
-let supabase = null;
+let supabaseClient = null;
 
 if(supabaseReady){
   try{
     if(!window.supabase) throw new Error("Library Supabase (window.supabase) tidak ditemukan — cek apakah script CDN-nya berhasil dimuat di index.html.");
-    supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch(err){
     console.error("Gagal menyiapkan koneksi Supabase, situs memakai data cadangan.", err);
     supabaseReady = false;
@@ -114,7 +114,7 @@ let REVIEWS = [];
 // ====== AMBIL DATA DARI SUPABASE ======
 async function loadProducts(){
   if(!supabaseReady) return FALLBACK_PRODUCTS;
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from("products")
     .select("id, name, price, img, avg, count, desc:description")
     .order("id");
@@ -127,7 +127,7 @@ async function loadProducts(){
 
 async function loadReviews(){
   if(!supabaseReady) return FALLBACK_REVIEWS;
-  const { data, error } = await supabase.from("reviews").select("*").order("created_at", { ascending: false });
+  const { data, error } = await supabaseClient.from("reviews").select("*").order("created_at", { ascending: false });
   if(error || !data || data.length === 0){
     console.error("Gagal memuat ulasan dari Supabase, pakai data cadangan.", error);
     return FALLBACK_REVIEWS;
@@ -240,13 +240,13 @@ async function rateProduct(id, value){
   if(!p) return;
 
   if(supabaseReady){
-    const { error } = await supabase.rpc("rate_product", { p_id: id, p_rating: value });
+    const { error } = await supabaseClient.rpc("rate_product", { p_id: id, p_rating: value });
     if(error){
       console.error("Gagal mengirim rating ke Supabase.", error);
       showToast("Gagal mengirim rating, coba lagi nanti");
       return;
     }
-    const { data } = await supabase.from("products").select("avg,count").eq("id", id).single();
+    const { data } = await supabaseClient.from("products").select("avg,count").eq("id", id).single();
     if(data){ p.avg = data.avg; p.count = data.count; }
   } else {
     // mode fallback: dihitung di memori browser saja, tidak permanen
@@ -585,7 +585,7 @@ function finishOrder(instructionText, paymentStatus){
 // dikonfigurasi, pesanan cuma tampil di layar sukses dan tidak tersimpan permanen.
 async function saveOrderToDatabase(paymentStatus){
   if(!supabaseReady) return;
-  const { error } = await supabase.from("orders").insert({
+  const { error } = await supabaseClient.from("orders").insert({
     order_number: currentOrder.number,
     customer_name: currentOrder.customer.name,
     customer_phone: currentOrder.customer.phone,
@@ -633,7 +633,7 @@ function setupReviewForm(){
     };
 
     if(supabaseReady){
-      const { error } = await supabase.from("reviews").insert(newReview);
+      const { error } = await supabaseClient.from("reviews").insert(newReview);
       if(error){
         console.error("Gagal mengirim ulasan ke Supabase.", error);
         showToast("Gagal mengirim ulasan, coba lagi nanti");
